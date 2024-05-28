@@ -5,6 +5,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Esta clase genera mil registros de alumnos aleatorios y los guarda en un archivo de texto.
+ */
 public class GenerarAlumno {
 
     static ArrayList<Alumno> listaAlumnos = new ArrayList<>();

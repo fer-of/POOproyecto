@@ -4,6 +4,10 @@ public class Alumno {
     String nombre, apellidoP, apellidoM, carrera, direccion, historialAcademico;
     int numCuenta, edad;
 
+    
+/**
+ * Esta clase representa a un alumno con sus datos básicos.
+ */
     public Alumno() {}
 
     public Alumno(int numCuenta, String nombre, String apellidoP, String apellidoM, String carrera, String direccion, int edad) {
@@ -21,5 +25,9 @@ public class Alumno {
     @Override
     public String toString() {
         return numCuenta + ";" + nombre + ";" + apellidoP + ";" + apellidoM + ";" + edad + ";" + direccion + ";" + carrera;
+    }
+
+    int getNumCuenta() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

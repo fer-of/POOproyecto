@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * Esta clase genera datos aleatorios para alumnos, como nombres, apellidos, edades y direcciones.
+ */
 public class GenerarDatosAlumno {
 
     static ArrayList<String> nombresFemeninos = leerNombresDesdeArchivo("nombresMujer.txt");

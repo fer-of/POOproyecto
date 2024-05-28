@@ -10,6 +10,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Esta clase calcula el número de inscripción para los alumnos basado en un indicador escolar.
+ * Ordena los alumnos según su indicador escolar y muestra el número de inscripción.
+ */
 public class CalcularNumeroInscripcion {
 
     public ArrayList<Integer> listaIndex = new ArrayList<>();

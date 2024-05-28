@@ -11,6 +11,10 @@ import java.util.Random;
  *
  * @author Diegi
  */
+/**
+ * Esta clase representa un generador de historial académico para estudiantes.
+ * Genera un historial de materias y calificaciones para una carrera específica.
+ */
 public class GenerarHistorialAcademico {
     
     static String carrera;

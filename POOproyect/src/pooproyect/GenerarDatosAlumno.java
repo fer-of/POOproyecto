@@ -7,24 +7,19 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class GenerarDatosAlumno {
-    
+
     static ArrayList<String> nombresFemeninos = leerNombresDesdeArchivo("nombresMujer.txt");
     static ArrayList<String> nombresMasculinos = leerNombresDesdeArchivo("nombresHombre.txt");
     static ArrayList<String> apellidos = leerNombresDesdeArchivo("apellidos.txt");
     static ArrayList<String> direccion = leerNombresDesdeArchivo("DireccionesDepuradas.txt");
 
-    // Método para leer datos desde el archivo
     private static ArrayList<String> leerNombresDesdeArchivo(String rutaArchivo) {
         ArrayList<String> datos = new ArrayList<>();
-        try {
-            FileReader fr = new FileReader(rutaArchivo);
-            BufferedReader br = new BufferedReader(fr);
+        try (FileReader fr = new FileReader(rutaArchivo); BufferedReader br = new BufferedReader(fr)) {
             String linea;
             while ((linea = br.readLine()) != null) {
                 datos.add(linea);
             }
-            br.close();
-            fr.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -75,28 +70,23 @@ public class GenerarDatosAlumno {
                 }
                 nombres = nombre1 + ' ' + nombre2;
                 return nombres;
-
             } else {
                 String nombre = obtenerNombreFemenino();
                 return nombre;
-                
             }
         } else {
             if (cantidadNombres == 1) {
-               String nombre1 = obtenerNombreMasculino();
+                String nombre1 = obtenerNombreMasculino();
                 String nombre2 = obtenerNombreMasculino();
                 if (nombre1.equals(nombre2)) {
                     nombre2 = obtenerNombreMasculino();
                 }
                 nombres = nombre1 + ' ' + nombre2;
                 return nombres;
-
             } else {
                 String nombre = obtenerNombreMasculino();
                 return nombre;
-                
             }
-
         }
     }
 
@@ -104,17 +94,11 @@ public class GenerarDatosAlumno {
         return generarNumeroAleatorioEdad();
     }
     
-    public static String obtenerDireccion(){
+    public static String obtenerDireccion() {
         int i = generarNumeroAleatorioBoundi(371);
-        return direccion.get(i); 
+        return direccion.get(i);
     }
-
 }
-
-
-
-
-
 
     
 
